@@ -1249,9 +1249,9 @@ $.extend(Datepicker.prototype, {
 			return;
 		}
 		var target = $(event.target);
-		if (!target.parents().andSelf().hasClass(plugin._popupClass) &&
+		if (!target.parents().addBack().hasClass(plugin._popupClass) &&
 				!target.hasClass(plugin.markerClassName) &&
-				!target.parents().andSelf().hasClass(plugin._triggerClass)) {
+				!target.parents().addBack().hasClass(plugin._triggerClass)) {
 			plugin._hidePlugin(plugin.curInst);
 		}
 	},
