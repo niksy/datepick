@@ -1,8 +1,8 @@
 ﻿/* http://keith-wood.name/datepick.html
    Date picker for jQuery v4.1.0.
    Written by Keith Wood (kbwood{at}iinet.com.au) February 2010.
-   Dual licensed under the GPL (http://dev.jquery.com/browser/trunk/jquery/GPL-LICENSE.txt) and 
-   MIT (http://dev.jquery.com/browser/trunk/jquery/MIT-LICENSE.txt) licenses. 
+   Dual licensed under the GPL (http://dev.jquery.com/browser/trunk/jquery/GPL-LICENSE.txt) and
+   MIT (http://dev.jquery.com/browser/trunk/jquery/MIT-LICENSE.txt) licenses.
    Please attribute the author if you use it. */
 
 (function($) { // Hide scope, no $ conflict
@@ -110,7 +110,7 @@ $.extend(Datepicker.prototype, {
 	_curMonthClass: 'datepick-month-', // Marker for current month/year
 	_anyYearClass: 'datepick-any-year', // Marker for year direct input
 	_curDoWClass: 'datepick-dow-', // Marker for day of week
-	
+
 	commands: { // Command actions that may be added to a layout by name
 		// name: { // The command name, use '{button:name}' or '{link:name}' in layouts
 		//		text: '', // The field in the regional settings for the displayed text
@@ -355,10 +355,10 @@ $.extend(Datepicker.prototype, {
 	   @param  format    (string) the desired format of the date (optional, default datepicker format)
 	   @param  date      (Date) the date value to format
 	   @param  settings  (object) attributes include:
-	                     dayNamesShort    (string[]) abbreviated names of the days from Sunday (optional)
-	                     dayNames         (string[]) names of the days from Sunday (optional)
-	                     monthNamesShort  (string[]) abbreviated names of the months (optional)
-	                     monthNames       (string[]) names of the months (optional)
+						 dayNamesShort    (string[]) abbreviated names of the days from Sunday (optional)
+						 dayNames         (string[]) names of the days from Sunday (optional)
+						 monthNamesShort  (string[]) abbreviated names of the months (optional)
+						 monthNames       (string[]) names of the months (optional)
 						 calculateWeek    (function) function that determines week of the year (optional)
 	   @return  (string) the date in the above format */
 	formatDate: function(format, date, settings) {
@@ -449,15 +449,15 @@ $.extend(Datepicker.prototype, {
 	   @param  format    (string) the expected format of the date ('' for default datepicker format)
 	   @param  value     (string) the date in the above format
 	   @param  settings  (object) attributes include:
-	                     shortYearCutoff  (number) the cutoff year for determining the century (optional)
-	                     dayNamesShort    (string[]) abbreviated names of the days from Sunday (optional)
-	                     dayNames         (string[]) names of the days from Sunday (optional)
-	                     monthNamesShort  (string[]) abbreviated names of the months (optional)
-	                     monthNames       (string[]) names of the months (optional)
+						 shortYearCutoff  (number) the cutoff year for determining the century (optional)
+						 dayNamesShort    (string[]) abbreviated names of the days from Sunday (optional)
+						 dayNames         (string[]) names of the days from Sunday (optional)
+						 monthNamesShort  (string[]) abbreviated names of the months (optional)
+						 monthNames       (string[]) names of the months (optional)
 	   @return  (Date) the extracted date value or null if value is blank
 	   @throws  errors if the format and/or value are missing,
-	            if the value doesn't match the format,
-	            or if the date is invalid */
+				if the value doesn't match the format,
+				or if the date is invalid */
 	parseDate: function(format, value, settings) {
 		if (value == null) {
 			throw 'Invalid arguments';
@@ -598,18 +598,18 @@ $.extend(Datepicker.prototype, {
 
 	/* A date may be specified as an exact value or a relative one.
 	   @param  dateSpec     (Date or number or string) the date as an object or string
-	                        in the given format or an offset - numeric days from today,
-	                        or string amounts and periods, e.g. '+1m +2w'
+							in the given format or an offset - numeric days from today,
+							or string amounts and periods, e.g. '+1m +2w'
 	   @param  defaultDate  (Date) the date to use if no other supplied, may be null
 	   @param  currentDate  (Date) the current date as a possible basis for relative dates,
-	                        if null today is used (optional)
+							if null today is used (optional)
 	   @param  dateFormat   (string) the expected date format - see formatDate above (optional)
 	   @param  settings     (object) attributes include:
-	                        shortYearCutoff  (number) the cutoff year for determining the century (optional)
-	                        dayNamesShort    (string[7]) abbreviated names of the days from Sunday (optional)
-	                        dayNames         (string[7]) names of the days from Sunday (optional)
-	                        monthNamesShort  (string[12]) abbreviated names of the months (optional)
-	                        monthNames       (string[12]) names of the months (optional)
+							shortYearCutoff  (number) the cutoff year for determining the century (optional)
+							dayNamesShort    (string[7]) abbreviated names of the days from Sunday (optional)
+							dayNames         (string[7]) names of the days from Sunday (optional)
+							monthNamesShort  (string[12]) abbreviated names of the months (optional)
+							monthNames       (string[12]) names of the months (optional)
 	   @return  (Date) the decoded date */
 	determineDate: function(dateSpec, defaultDate, currentDate, dateFormat, settings) {
 		if (currentDate && typeof currentDate != 'object') {
@@ -648,7 +648,7 @@ $.extend(Datepicker.prototype, {
 
 	/* Find the number of days in a given month.
 	   @param  year   (Date) the date to get days for or
-	                  (number) the full year
+					  (number) the full year
 	   @param  month  (number) the month (1 to 12)
 	   @return  (number) the number of days in this month */
 	daysInMonth: function(year, month) {
@@ -659,7 +659,7 @@ $.extend(Datepicker.prototype, {
 
 	/* Calculate the day of the year for a date.
 	   @param  year   (Date) the date to get the day-of-year for or
-	                  (number) the full year
+					  (number) the full year
 	   @param  month  (number) the month (1-12)
 	   @param  day    (number) the day
 	   @return  (number) the day of the year */
@@ -671,7 +671,7 @@ $.extend(Datepicker.prototype, {
 
 	/* Set as calculateWeek to determine the week of the year based on the ISO 8601 definition.
 	   @param  year   (Date) the date to get the week for or
-	                  (number) the full year
+					  (number) the full year
 	   @param  month  (number) the month (1-12)
 	   @param  day    (number) the day
 	   @return  (number) the number of the week within the year that contains this date */
@@ -823,9 +823,9 @@ $.extend(Datepicker.prototype, {
 	/* Retrieve or reconfigure the settings for a control.
 	   @param  target   (element) the control to affect
 	   @param  options  (object) the new options for this instance or
-	                    (string) an individual property name
+						(string) an individual property name
 	   @param  value    (any) the individual property value (omit if options
-	                    is an object or to retrieve the value of a setting)
+						is an object or to retrieve the value of a setting)
 	   @return  (any) if retrieving a value */
 	_optionPlugin: function(target, options, value) {
 		target = $(target);
@@ -1032,7 +1032,7 @@ $.extend(Datepicker.prototype, {
 
 	/* Show a popup datepicker.
 	   @param  target  (event) a focus event or
-	                   (element) the control to use */
+					   (element) the control to use */
 	_showPlugin: function(target) {
 		target = $(target.target || target);
 		var inst = target.data(plugin.propertyName);
@@ -1117,7 +1117,7 @@ $.extend(Datepicker.prototype, {
 
 	/* Update the datepicker display.
 	   @param  target  (event) a focus event or
-	                   (element) the control to use
+					   (element) the control to use
 	   @param  hidden  (boolean) true to initially hide the datepicker */
 	_update: function(target, hidden) {
 		target = $(target.target || target);
@@ -1258,7 +1258,7 @@ $.extend(Datepicker.prototype, {
 
 	/* Hide a popup datepicker.
 	   @param  target     (element) the control to use or
-	                      (object) the current instance settings
+						  (object) the current instance settings
 	   @param  immediate  (boolean) true to close immediately without animation */
 	_hidePlugin: function(target, immediate) {
 		if (!target) {
@@ -1582,7 +1582,7 @@ $.extend(Datepicker.prototype, {
 			inst.prevDate = plugin.newDate(inst.drawDate);
 			var show = this._checkMinMax((year != null ?
 				plugin.newDate(year, month, 1) : plugin.today()), inst);
-			inst.drawDate = plugin.newDate(show.getFullYear(), show.getMonth() + 1, 
+			inst.drawDate = plugin.newDate(show.getFullYear(), show.getMonth() + 1,
 				(day != null ? day : Math.min(inst.drawDate.getDate(),
 				plugin.daysInMonth(show.getFullYear(), show.getMonth() + 1))));
 			this._update(target);
@@ -2024,9 +2024,9 @@ function isNotChained(command, otherArgs) {
 
 /* Attach the datepicker functionality to a jQuery selection.
    @param  options  (object) the new settings to use for these instances (optional) or
-                    (string) the command to run (optional)
+					(string) the command to run (optional)
    @return  (jQuery) for chaining further calls or
-            (any) getter value */
+			(any) getter value */
 $.fn.datepick = function(options) {
 	var otherArgs = Array.prototype.slice.call(arguments, 1);
 	if (isNotChained(options, otherArgs)) {
